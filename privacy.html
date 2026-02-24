@@ -4,165 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutz - H10 Heart & Sleep Monitor</title>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vasilis-zografos/mvp.css@1.12.0/mvp.css">
-    
     <style>
-        :root {
-            --color-primary: #00d4ff;
-            --color-bg: #020c1b;
-            --color-text: #e6edf3;
-        }
-
-        /* High-Tech Hintergrund */
+        :root { --color-primary: #00d4ff; --color-bg: #020c1b; --color-text: #e6edf3; }
         body {
             background: radial-gradient(circle at top, #0a192f 0%, var(--color-bg) 100%);
-            background-attachment: fixed;
-            color: var(--color-text);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-attachment: fixed; color: var(--color-text); line-height: 1.6;
+            margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
         }
-
-        /* Digitales Gitter */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: -1;
-            pointer-events: none;
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: -1; pointer-events: none;
         }
-
-        /* NAVIGATION: Logo links, Menü rechts */
         nav {
-            width: 100%;
-            max-width: 1000px;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center;
-            background: rgba(10, 25, 47, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin: 20px auto;
-            position: sticky;
-            top: 10px;
-            z-index: 1000;
+            width: 100%; max-width: 1000px; display: flex !important; justify-content: space-between !important;
+            align-items: center; background: rgba(10, 25, 47, 0.8); backdrop-filter: blur(10px);
+            padding: 10px 20px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 20px auto; position: sticky; top: 10px; z-index: 1000;
         }
-
-        nav ul {
-            display: flex !important;
-            flex-direction: row !important;
-            list-style: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline-block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        header, main {
-            text-align: center;
-            width: 100%;
-            max-width: 800px; /* Etwas schmaler für bessere Lesbarkeit von Texten */
-        }
-
-        h1, h2, h3 { color: #fff; text-align: center; }
+        nav ul { display: flex !important; list-style: none !important; margin: 0 !important; gap: 20px; }
+        header, main { text-align: center; width: 100%; max-width: 800px; }
+        h1, h2, h3 { color: #fff; }
         a { color: var(--color-primary); text-decoration: none; }
-        
-        .active-lang { color: #fff; font-weight: bold; pointer-events: none; }
-
-        /* Text-Ausrichtung für die Erklärung */
         .legal-text {
-            text-align: left;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 2rem;
+            text-align: left; background: rgba(255, 255, 255, 0.03); padding: 2.5rem;
+            border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 2rem;
         }
-
-        ul {
-            text-align: left;
-        }
+        ul { text-align: left; }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html"><strong>H10 Heart & Sleep</strong></a>
         <ul>
-            <li><span class="active-lang">DE</span> | <a href="en/privacy.html">EN</a></li>
+            <li><strong>DE</strong> | <a href="en/privacy.html">EN</a></li>
             <li><a href="privacy.html">Datenschutz</a></li>
             <li><a href="imprint.html">Impressum</a></li>
         </ul>
     </nav>
-
     <main>
         <section>
-            <header>
-                <h1>Datenschutzerklärung</h1>
-                <p>Stand: Februar 2026</p>
-            </header>
-
+            <header><h1>Datenschutzerklärung</h1><p>Stand: Februar 2026</p></header>
             <div class="legal-text">
                 <h2>1. Datenverarbeitung auf einen Blick</h2>
-                <p>Der Schutz Ihrer Gesundheitsdaten ist uns ein wichtiges Anliegen. Diese App wurde so konzipiert, dass sie <strong>keine persönlichen Daten auf externen Servern speichert</strong>.</p>
+                <p>Der Schutz Ihrer Gesundheitsdaten ist uns wichtig. Diese App speichert <strong>keine Daten auf externen Servern</strong>.</p>
                 
-                <h2>2. Erhebung von Gesundheitsdaten (EKG & Puls)</h2>
-                <p>Die App empfängt über Bluetooth Daten von Ihrem Polar H10 Brustgurt.</p>
+                <h2>2. Erhebung von Gesundheitsdaten</h2>
                 <ul>
-                    <li><strong>Lokale Speicherung:</strong> Alle Messungen werden ausschließlich lokal auf Ihrem Smartphone gespeichert.</li>
-                    <li><strong>Kein Cloud-Sync:</strong> Es findet keine automatische Übertragung an Server oder Drittanbieter statt.</li>
-                    <li><strong>PDF-Export:</strong> Wenn Sie die PDF-Export-Funktion nutzen, wird die Datei lokal auf Ihrem Gerät erstellt. Sie haben die volle Kontrolle darüber, ob und mit wem Sie diese Datei teilen.</li>
+                    <li><strong>Lokale Speicherung:</strong> Alle Messungen bleiben ausschließlich auf Ihrem Smartphone.</li>
+                    <li><strong>Kein Cloud-Sync:</strong> Keine Übertragung an uns oder Dritte.</li>
+                    <li><strong>PDF-Export:</strong> Dateien werden lokal erstellt; Sie entscheiden über die Weitergabe.</li>
                 </ul>
 
-                <h2>3. Berechtigungen</h2>
-<p>Die App benötigt Zugriff auf Bluetooth und den <strong>Standort</strong>:</p>
-<ul>
-    <li><strong>Bluetooth:</strong> Zur Kommunikation mit dem Polar H10 Brustgurt.</li>
-    <li><strong>Standort:</strong> Unter Android ist die Standortberechtigung technisch zwingend erforderlich, um nach Bluetooth-Geräten (BLE) in der Nähe suchen zu können. 
-    <br><strong>Wichtig:</strong> Die App erfasst, nutzt oder speichert zu keinem Zeitpunkt Ihren tatsächlichen geografischen Standort. Wir verwenden diese Berechtigung ausschließlich für den Bluetooth-Verbindungsprozess.</li>
-</ul>
-                
+                <h2>3. Berechtigungen (Bluetooth & Standort)</h2>
+                <p>Die App benötigt Zugriff auf Bluetooth und den Standort:</p>
+                <ul>
+                    <li><strong>Bluetooth:</strong> Zur Verbindung mit dem Polar H10 Sensor.</li>
+                    <li><strong>Standort:</strong> Android erfordert diese Berechtigung technisch, um nach Bluetooth-Geräten suchen zu können. Die App erfasst oder speichert jedoch <strong>niemals</strong> Ihren tatsächlichen Standort.</li>
+                </ul>
+
                 <h2>4. Ihre Rechte</h2>
-                <p>Da alle Daten lokal auf Ihrem Gerät liegen, können Sie diese jederzeit durch Löschen der App oder innerhalb der Tagebuch-Funktion der App selbstständig entfernen.</p>
-            
-            <h2>5. Internationaler Datenschutz & Kinder</h2>
-<p>
-    <strong>USA / Kalifornien (CCPA):</strong> Wir verkaufen keine persönlichen Daten. Da alle Daten ausschließlich lokal auf Ihrem Gerät gespeichert werden, haben wir keinen Zugriff darauf. <br>
-    <strong>Kinder:</strong> Diese App richtet sich nicht an Personen unter 16 Jahren. Wir sammeln wissentlich keine Daten von Kindern.
-</p>
-            
+                <p>Sie können alle Daten jederzeit durch Löschen der App oder innerhalb der Historie entfernen.</p>
+
+                <h2>5. Internationaler Datenschutz & Kinder</h2>
+                <p><strong>CCPA:</strong> Wir verkaufen keine Daten. <br>
+                <strong>Kinder:</strong> Diese App richtet sich nicht an Personen unter 16 Jahren. Wir sammeln keine Daten von Kindern.</p>
             </div>
-            
             <p><a href="index.html">← Zurück zur Startseite</a></p>
         </section>
     </main>
-
-    <footer>
-        <hr>
-        <p>
-            <small>
-                &copy; 2026 H10 Heart & Sleep Monitor<br>
-                <a href="privacy.html">Datenschutz</a> | <a href="imprint.html">Impressum</a>
-            </small>
-        </p>
-    </footer>
-
 </body>
 </html>
-
-

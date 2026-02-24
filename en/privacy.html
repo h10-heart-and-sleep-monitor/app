@@ -4,156 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - H10 Heart & Sleep Monitor</title>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vasilis-zografos/mvp.css@1.12.0/mvp.css">
-    
     <style>
-        :root {
-            --color-primary: #00d4ff;
-            --color-bg: #020c1b;
-            --color-text: #e6edf3;
-        }
-
-        /* High-Tech Background */
+        :root { --color-primary: #00d4ff; --color-bg: #020c1b; --color-text: #e6edf3; }
         body {
             background: radial-gradient(circle at top, #0a192f 0%, var(--color-bg) 100%);
-            background-attachment: fixed;
-            color: var(--color-text);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-attachment: fixed; color: var(--color-text); line-height: 1.6;
+            margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center;
         }
-
-        /* Digital Grid */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: -1;
-            pointer-events: none;
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: -1; pointer-events: none;
         }
-
-        /* NAVIGATION: Logo left, Menu right */
         nav {
-            width: 100%;
-            max-width: 1000px;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center;
-            background: rgba(10, 25, 47, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin: 20px auto;
-            position: sticky;
-            top: 10px;
-            z-index: 1000;
+            width: 100%; max-width: 1000px; display: flex !important; justify-content: space-between !important;
+            align-items: center; background: rgba(10, 25, 47, 0.8); backdrop-filter: blur(10px);
+            padding: 10px 20px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 20px auto; position: sticky; top: 10px; z-index: 1000;
         }
-
-        nav ul {
-            display: flex !important;
-            flex-direction: row !important;
-            list-style: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline-block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        header, main {
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        h1, h2, h3 { color: #fff; text-align: center; }
+        nav ul { display: flex !important; list-style: none !important; margin: 0 !important; gap: 20px; }
+        header, main { text-align: center; width: 100%; max-width: 800px; }
+        h1, h2, h3 { color: #fff; }
         a { color: var(--color-primary); text-decoration: none; }
-        
-        .active-lang { color: #fff; font-weight: bold; pointer-events: none; }
-
-        /* Text alignment for legal content */
         .legal-text {
-            text-align: left;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 2rem;
+            text-align: left; background: rgba(255, 255, 255, 0.03); padding: 2.5rem;
+            border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 2rem;
         }
-
-        ul {
-            text-align: left;
-        }
+        ul { text-align: left; }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html"><strong>H10 Heart & Sleep</strong></a>
         <ul>
-            <li><a href="../privacy.html">DE</a> | <span class="active-lang">EN</span></li>
+            <li><a href="../privacy.html">DE</a> | <strong>EN</strong></li>
             <li><a href="privacy.html">Privacy</a></li>
             <li><a href="imprint.html">Imprint</a></li>
         </ul>
     </nav>
-
     <main>
         <section>
-            <header>
-                <h1>Privacy Policy</h1>
-                <p>Last updated: February 2026</p>
-            </header>
-
+            <header><h1>Privacy Policy</h1><p>Last updated: February 2026</p></header>
             <div class="legal-text">
                 <h2>1. Data Protection at a Glance</h2>
-                <p>Protecting your health data is an important concern to us. This app has been designed so that it <strong>does not store any personal data on external servers</strong>.</p>
+                <p>Protecting your health data is vital. This app **does not store data on external servers**.</p>
                 
-                <h2>2. Collection of Health Data (ECG & Pulse)</h2>
-                <p>The app receives data from your Polar H10 chest strap via Bluetooth.</p>
+                <h2>2. Collection of Health Data</h2>
                 <ul>
-                    <li><strong>Local Storage:</strong> All measurements are stored exclusively on your smartphone locally.</li>
-                    <li><strong>No Cloud Sync:</strong> No automatic transmission to servers or third-party providers takes place.</li>
-                    <li><strong>PDF Export:</strong> If you use the PDF export function, the file is created locally on your device. You have full control over whether and with whom you share this file.</li>
+                    <li><strong>Local Storage:</strong> All measurements stay exclusively on your smartphone.</li>
+                    <li><strong>No Cloud Sync:</strong> No transmission to us or third parties.</li>
+                    <li><strong>PDF Export:</strong> Files are created locally; you decide if you want to share them.</li>
                 </ul>
 
-          <h2>3. Permissions</h2>
-<p>The app requires access to Bluetooth and <strong>Location</strong>:</p>
-<ul>
-    <li><strong>Bluetooth:</strong> To communicate with the Polar H10 chest strap.</li>
-    <li><strong>Location:</strong> On Android, location permission is technically mandatory to scan for nearby Bluetooth (BLE) devices. 
-    <br><strong>Important:</strong> The app does not collect, use, or store your actual geographical location at any time. We use this permission solely for the Bluetooth pairing process.</li>
-</ul>
+                <h2>3. Permissions (Bluetooth & Location)</h2>
+                <p>The app requires access to Bluetooth and Location:</p>
+                <ul>
+                    <li><strong>Bluetooth:</strong> To connect to the Polar H10 sensor.</li>
+                    <li><strong>Location:</strong> Android mandates this to scan for Bluetooth devices. The app **never** tracks or stores your actual physical location.</li>
+                </ul>
+
                 <h2>4. Your Rights</h2>
-                <p>Since all data is stored locally on your device, you can remove it at any time by deleting the app or within the app's diary function.</p>
+                <p>You can remove all data at any time by deleting the app or within the history function.</p>
+
+                <h2>5. International Privacy & Children</h2>
+                <p><strong>CCPA / California:</strong> We do not sell any data. <br>
+                <strong>COPPA / Children:</strong> This app is not intended for children under 16. We do not knowingly collect data from children.</p>
             </div>
-            
-            <p><a href="index.html">← Back to home page</a></p>
+            <p><a href="index.html">← Back to home</a></p>
         </section>
     </main>
-
-    <footer>
-        <hr>
-        <p>
-            <small>
-                &copy; 2026 H10 Heart & Sleep Monitor<br>
-                <a href="privacy.html">Privacy Policy</a> | <a href="imprint.html">Imprint</a>
-            </small>
-        </p>
-    </footer>
-
 </body>
 </html>
-

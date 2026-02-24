@@ -20,10 +20,14 @@
             background-attachment: fixed;
             color: var(--color-text);
             line-height: 1.6;
-            text-align: center; /* Alles zentrieren */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Zentriert den Hauptinhalt */
         }
 
-        /* Gittermuster */
+        /* Digitales Gitter */
         body::before {
             content: "";
             position: fixed;
@@ -36,68 +40,55 @@
             pointer-events: none;
         }
 
-        /* Navigation: Logo links, Links rechts */
+        /* NAVIGATION: Logo links, Menü rechts */
         nav {
-            display: flex;
-            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            display: flex !important;
+            justify-content: space-between !important;
             align-items: center;
-            background: rgba(10, 25, 47, 0.9);
+            background: rgba(10, 25, 47, 0.8);
             backdrop-filter: blur(10px);
-            padding: 0.5rem 1.5rem;
+            padding: 10px 20px;
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
             position: sticky;
             top: 10px;
-            z-index: 100;
-            max-width: 1100px;
-            margin: 0 auto 40px auto;
+            z-index: 1000;
         }
 
         nav ul {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            align-items: center;
+            display: flex !important;
+            flex-direction: row !important;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            gap: 20px;
         }
 
         nav ul li {
-            margin: 0;
-            font-size: 0.9rem;
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
-        /* Header Image Zentrierung */
-        header img {
+        /* Zentrierung von Header und Main */
+        header, main {
+            text-align: center;
             width: 100%;
             max-width: 900px;
+        }
+
+        header img {
+            width: 100%;
             border-radius: 12px;
-            margin: 20px auto;
-            display: block;
+            margin: 20px 0;
             box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
             border: 1px solid rgba(0, 212, 255, 0.1);
         }
 
-        /* Feature Boxen */
-        article {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        aside {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            flex: 1;
-            min-width: 250px;
-            max-width: 350px;
-            text-align: center;
-        }
-
-        h1, h2, h3 { color: #fff; margin-top: 1rem; }
-        a { color: var(--color-primary); text-decoration: none; }
-        
+        /* Button-Styling */
         .btn-main {
             background: var(--color-primary);
             color: #000 !important;
@@ -105,20 +96,44 @@
             border-radius: 8px;
             font-weight: bold;
             display: inline-block;
-            margin-top: 20px;
+            margin: 20px 0;
+            text-decoration: none;
         }
 
-        hr { border-color: rgba(255, 255, 255, 0.1); }
+        /* Feature Boxen Zentrierung */
+        section article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        aside {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 280px;
+            text-align: center;
+        }
+
+        h1, h2, h3 { color: #fff; }
+        a { color: var(--color-primary); text-decoration: none; }
         
-        /* Sprach-Indikator */
-        .lang-active { color: #fff; font-weight: bold; }
+        /* Sprach-Umschalter aktiv-Status */
+        .active-lang { color: #fff; font-weight: bold; pointer-events: none; }
+
+        /* Listen-Zentrierung */
+        ul {
+            display: inline-block;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html"><strong>H10 Heart & Sleep Monitor</strong></a>
+        <a href="index.html"><strong>H10 Heart & Sleep</strong></a>
         <ul>
-            <li><span class="lang-active">DE</span> | <a href="en/index.html">EN</a></li>
+            <li><span class="active-lang">DE</span> | <a href="en/index.html">EN</a></li>
             <li><a href="privacy.html">Datenschutz</a></li>
             <li><a href="imprint.html">Impressum</a></li>
         </ul>
@@ -127,14 +142,17 @@
     <header>
         <img src="header.png" alt="H10 Heart & Sleep Monitor Hero Image">
         <h1>Präzises Herz-Monitoring für Ihren Polar H10</h1>
-        <p>Echtzeit-EKG, professionelle HRV-Analyse und Langzeit-Monitoring.<br>Direkt auf Ihrem Smartphone – <strong>100% lokal & privat.</strong></p>
-        <a href="#" class="btn-main">Bald im Google Play Store</a>
+        <p>Echtzeit-EKG, professionelle HRV-Analyse und Langzeit-Monitoring.<br>
+        <strong>100% lokal auf Ihrem Smartphone gespeichert.</strong></p>
+        <a href="#" class="btn-main">Demnächst im Play Store</a>
     </header>
 
     <main>
         <hr>
         <section>
-            <h2>Vorteile auf einen Blick</h2>
+            <header>
+                <h2>Vorteile auf einen Blick</h2>
+            </header>
             <article>
                 <aside>
                     <h3>30s EKG View</h3>
@@ -146,7 +164,7 @@
                 </aside>
                 <aside>
                     <h3>Keine Cloud</h3>
-                    <p>Ihre Daten verlassen niemals Ihr Handy. Kein Tracking, keine Accounts, keine Abos.</p>
+                    <p>Ihre Daten gehören nur Ihnen. Kein Tracking, keine Accounts, keine externen Server.</p>
                 </aside>
             </article>
         </section>
@@ -155,14 +173,11 @@
 
         <section>
             <h2>Maximale Präzision</h2>
-            <p>
-                Die App nutzt die volle Abtastrate des <strong>Polar H10</strong> Sensors. <br>
-                Erhalten Sie Einblicke, die weit über herkömmliche Fitness-Tracker hinausgehen.
-            </p>
-            <ul style="display: inline-block; text-align: left; max-width: 500px;">
-                <li><strong>Direkt-Anbindung:</strong> Native Polar H10 Unterstützung.</li>
-                <li><strong>Tagebuch:</strong> Alle Messungen im zeitlichen Verlauf.</li>
-                <li><strong>Gereinigte Daten:</strong> Intelligente Signal-Filterung.</li>
+            <p>Die App nutzt die volle Abtastrate des Polar H10 Sensors für klinisch inspirierte Einblicke.</p>
+            <ul>
+                <li><strong>Native Unterstützung:</strong> Optimiert für Polar H10.</li>
+                <li><strong>Historie:</strong> Alle Messungen im Tagebuch.</li>
+                <li><strong>Gereinigte Daten:</strong> Signal-Filterung für echte Werte.</li>
             </ul>
         </section>
     </main>
@@ -173,9 +188,10 @@
             <small>
                 &copy; 2026 H10 Heart & Sleep Monitor<br>
                 Polar® ist ein eingetragenes Warenzeichen der Polar Electro Oy.<br>
-                <a href="privacy.html">Datenschutzerklärung</a> | <a href="imprint.html">Impressum</a>
+                <a href="privacy.html">Datenschutz</a> | <a href="imprint.html">Impressum</a>
             </small>
         </p>
     </footer>
+
 </body>
 </html>

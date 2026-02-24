@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H10 Heart & Sleep Monitor - EKG & HRV für Polar H10</title>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vasilis-zografos/mvp.css@1.12.0/mvp.css">
+    
     <style>
-        /* Kleiner Fix für das Header-Bild und die Navigation */
+        /* Falls das Stylesheet geladen ist, sorgt dieser Block für den Feinschliff */
+        :root {
+            --color-primary: #00d4ff; /* Ein schönes Cyan für deine App-Marke */
+        }
+        
+        body {
+            line-height: 1.6;
+        }
+
         header img {
             width: 100%;
+            max-width: 1200px;
+            height: auto;
             border-radius: 12px;
             margin-top: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: block;
         }
+
         nav {
-            margin-bottom: 20px;
+            justify-content: space-between;
         }
+
+        /* Falls MVP.css nicht lädt, hilft dieser Notfall-Hintergrund */
+        body {
+            background-color: #111;
+            color: #eee;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        
+        a { color: #00d4ff; }
+        aside { border: 1px solid #333; padding: 15px; border-radius: 8px; }
     </style>
 </head>
 <body>
@@ -35,7 +60,7 @@
         <p>Echtzeit-EKG, professionelle HRV-Analyse und Langzeit-Monitoring – direkt auf Ihrem Smartphone gespeichert. <strong>Ohne Cloud, ohne Account-Zwang.</strong></p>
         <br>
         <p>
-            <a href="#"><b>Verfügbar im Google Play Store (Bald verfügbar)</b></a>
+            <a href="https://play.google.com/store" target="_blank"><b>Verfügbar im Google Play Store (Bald verfügbar)</b></a>
         </p>
     </header>
 
@@ -45,18 +70,20 @@
             <header>
                 <h2>Warum H10 Heart & Sleep Monitor?</h2>
             </header>
-            <aside>
-                <h3>30s EKG View</h3>
-                <p>Erstellen Sie jederzeit ein hochpräzises EKG. Inklusive professionellem PDF-Export zum Teilen mit Ihrem Arzt oder Trainer.</p>
-            </aside>
-            <aside>
-                <h3>HRV & Schlaf</h3>
-                <p>Messen Sie Ihre Herzfrequenzvariabilität (RMSSD) während des Schlafs oder Trainings, um Erholung und Stresslevel exakt zu steuern.</p>
-            </aside>
-            <aside>
-                <h3>Lokale Privatsphäre</h3>
-                <p>Ihre Gesundheitsdaten gehören nur Ihnen. Alle Messungen werden lokal gespeichert und niemals auf externe Server übertragen.</p>
-            </aside>
+            <article>
+                <aside>
+                    <h3>30s EKG View</h3>
+                    <p>Erstellen Sie jederzeit ein hochpräzises EKG. Inklusive professionellem PDF-Export zum Teilen mit Ihrem Arzt oder Trainer.</p>
+                </aside>
+                <aside>
+                    <h3>HRV & Schlaf</h3>
+                    <p>Messen Sie Ihre Herzfrequenzvariabilität (RMSSD) während des Schlafs oder Trainings, um Erholung und Stresslevel exakt zu steuern.</p>
+                </aside>
+                <aside>
+                    <h3>Lokale Privatsphäre</h3>
+                    <p>Ihre Gesundheitsdaten gehören nur Ihnen. Alle Messungen werden lokal gespeichert und niemals auf externe Server übertragen.</p>
+                </aside>
+            </article>
         </section>
 
         <hr>
@@ -64,14 +91,13 @@
         <section>
             <h2>Volle Kontrolle über Ihre Herzdaten</h2>
             <p>
-                Diese App wurde speziell entwickelt, um das volle Potenzial des <strong>Polar H10</strong> (dem Goldstandard für Herzfrequenzmessung) auszuschöpfen. 
-                Ob im Sport, zur Stressanalyse oder zur Schlafüberwachung – erhalten Sie medizinisch inspirierte Einblicke ohne komplizierte Hardware.
+                Diese App wurde speziell entwickelt, um das volle Potenzial des <strong>Polar H10</strong> auszuschöpfen. Erhalten Sie medizinisch inspirierte Einblicke ohne komplizierte Hardware.
             </p>
             <ul>
-                <li><strong>Native Polar H10 Integration:</strong> Maximale Präzision durch direkte Sensor-Kommunikation.</li>
+                <li><strong>Native Polar H10 Integration:</strong> Maximale Präzision durch direkte Kommunikation.</li>
                 <li><strong>Tagebuch-Funktion:</strong> Verfolgen Sie Ihren Puls- und HRV-Verlauf über lange Zeiträume.</li>
-                <li><strong>Gereinigte Daten:</strong> Intelligente Filterung von Verbindungsabbrüchen für saubere Statistiken.</li>
-                <li><strong>Minimalistisches Design:</strong> Fokus auf das Wesentliche, optimiert für den Nachtmodus.</li>
+                <li><strong>Bereinigte Daten:</strong> Intelligente Filterung von Verbindungsabbrüchen.</li>
+                <li><strong>Minimalistisches Design:</strong> Fokus auf das Wesentliche.</li>
             </ul>
         </section>
     </main>
@@ -82,7 +108,6 @@
             <small>
                 &copy; 2026 H10 Heart & Sleep Monitor<br>
                 Polar® ist ein eingetragenes Warenzeichen der Polar Electro Oy.<br>
-                Diese App steht in keiner offiziellen Verbindung zu Polar Electro Oy.<br>
                 <a href="privacy.html">Datenschutzerklärung</a> | <a href="imprint.html">Impressum</a>
             </small>
         </p>
